@@ -1,21 +1,20 @@
 import { useNavigate } from "react-router-dom";
+// import heroimg from "images/adiguru_hall.jpeg"
 
 function Hero() {
   const navigate = useNavigate();
   const campusImages = [
-    "/images/office-1.png",
-    "/images/office-2.png",
-    "/images/office-3.png",
-    "/images/office-4.png",
+    "/images/adiguru_classroom.jpeg",
+         "/images/adiguru_visitor.jpeg",
+    "/images/adiguru_practice1.jpeg",
+    "/images/adiguru_practice2.jpeg",
+            //  "/images/adiguru_practice1.jpeg",
   ];
 
   return (
     <section className="hero-section">
-
       <div className="container">
-
         <div className="row align-items-center">
-
           {/* LEFT CONTENT */}
           <div className="col-lg-6">
 
@@ -77,8 +76,11 @@ function Hero() {
 
             <div className="hero-image-wrapper">
 
-              <img src={campusImages[1]} alt="Adi Guru classroom" className="hero-image img-fluid" />
-
+<img
+  src="/images/adiguru_hall.jpeg"
+  alt="Adi Guru classroom"
+  className="hero-image img-fluid"
+/>
               <div className="students-badge">
                 <h3>5000+</h3>
                 <p>Students Trained</p>
