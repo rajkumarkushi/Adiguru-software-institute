@@ -11,7 +11,7 @@ import {
   FaPalette,
 } from "react-icons/fa";
 
-function CourseCard({ course }) {
+function CourseCard({ course, noCol = false }) {
   const [showModal, setShowModal] = useState(false);
   const iconMap = {
     "Full Stack Development": <FaCode />,
@@ -32,31 +32,33 @@ function CourseCard({ course }) {
     "Interview Preparation",
   ];
 
+  const card = (
+    <div className="card h-100 shadow-sm border-0 course-card modern-course-card">
+      <div className="card-body">
+        <div className="course-card-header d-flex justify-content-between align-items-center">
+          <span className="course-tag d-flex align-items-center gap-2">
+            <span className="course-icon">{courseIcon}</span>
+            Career Track
+          </span>
+          <span className="course-level">Beginner to Advanced</span>
+        </div>
+        <h4 className="fw-bold mt-3 mb-3">{course.title}</h4>
+        <p className="mb-2 course-meta">
+          <strong>Duration:</strong> {course.duration}
+        </p>
+        <p className="mb-4 course-meta">
+          <strong>Mode:</strong> {course.mode}
+        </p>
+        <button className="btn btn-primary modern-btn" onClick={() => setShowModal(true)}>
+          View Curriculum
+        </button>
+      </div>
+    </div>
+  );
+
   return (
     <>
-      <div className="col-md-6 col-lg-4">
-        <div className="card h-100 shadow-sm border-0 course-card modern-course-card">
-          <div className="card-body">
-            <div className="course-card-header d-flex justify-content-between align-items-center">
-              <span className="course-tag d-flex align-items-center gap-2">
-                <span className="course-icon">{courseIcon}</span>
-                Career Track
-              </span>
-              <span className="course-level">Beginner to Advanced</span>
-            </div>
-            <h4 className="fw-bold mt-3 mb-3">{course.title}</h4>
-            <p className="mb-2 course-meta">
-              <strong>Duration:</strong> {course.duration}
-            </p>
-            <p className="mb-4 course-meta">
-              <strong>Mode:</strong> {course.mode}
-            </p>
-            <button className="btn btn-primary modern-btn" onClick={() => setShowModal(true)}>
-              View Curriculum
-            </button>
-          </div>
-        </div>
-      </div>
+      {noCol ? card : <div className="col-md-6 col-lg-4">{card}</div>}
 
       {showModal && (
         <div className="custom-modal-backdrop" onClick={() => setShowModal(false)}>

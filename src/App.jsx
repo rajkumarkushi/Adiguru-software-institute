@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./context/ThemeContext";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -11,19 +12,19 @@ import Placements from "./pages/Placements";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/courses" element={<Courses />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/placements" element={<Placements />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-
-      <Footer />
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/"           element={<Home />} />
+          <Route path="/courses"    element={<Courses />} />
+          <Route path="/about"      element={<About />} />
+          <Route path="/placements" element={<Placements />} />
+          <Route path="/contact"    element={<Contact />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

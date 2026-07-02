@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import CourseCard from "../components/CourseCard";
+import ScrollReveal from "../components/ScrollReveal";
 import courses from "../data/Courses";
 
 function Home() {
@@ -7,75 +8,110 @@ function Home() {
     <>
       <Hero />
 
-      <section className="py-5 bg-white">
+      {/* WHY CHOOSE US */}
+      <section className="info-cards-section">
         <div className="container">
+          <ScrollReveal className="text-center mb-5">
+            <span className="section-badge">Why Adi Guru</span>
+            <h2 className="section-title mt-2">
+              Everything You Need to <span>Succeed</span>
+            </h2>
+            <p className="section-subtitle">
+              From structured curriculum to placement support — we've got you covered at every step.
+            </p>
+          </ScrollReveal>
+
           <div className="row g-4">
-            <div className="col-md-4">
+            <ScrollReveal className="col-md-4" delay={0}>
               <div className="info-card h-100">
+                <div className="info-card-icon">🎯</div>
                 <h5>Career-Oriented Curriculum</h5>
-                <p className="mb-0">
-                  Structured modules designed with practical assignments, coding labs, and mock interviews.
+                <p>
+                  Structured modules with practical assignments, coding labs, and
+                  mock interviews designed to make you job-ready fast.
                 </p>
               </div>
-            </div>
-            <div className="col-md-4">
+            </ScrollReveal>
+            <ScrollReveal className="col-md-4" delay={120}>
               <div className="info-card h-100">
+                <div className="info-card-icon">🖥️</div>
                 <h5>Classroom + Online Flexibility</h5>
-                <p className="mb-0">
-                  Learn from our Sangareddy center or attend live online sessions with recorded support.
+                <p>
+                  Learn at our Sangareddy center or join live online sessions with
+                  recorded backups so you never miss a class.
                 </p>
               </div>
-            </div>
-            <div className="col-md-4">
+            </ScrollReveal>
+            <ScrollReveal className="col-md-4" delay={240}>
               <div className="info-card h-100">
+                <div className="info-card-icon">🚀</div>
                 <h5>Placement Readiness Program</h5>
-                <p className="mb-0">
-                  Resume building, aptitude coaching, interview mentoring, and hiring referrals.
+                <p>
+                  Resume building, aptitude coaching, interview mentoring, and
+                  direct hiring referrals through our 100+ partner network.
                 </p>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
-      <section className="py-5">
-
+      {/* POPULAR COURSES */}
+      <section className="py-section">
         <div className="container">
-
-          <h2 className="text-center fw-bold mb-5">
-            Popular Courses
-          </h2>
-
-          <div className="row">
-
-            {courses.map((course) => (
-              <CourseCard key={course.id} course={course} />
+          <ScrollReveal className="text-center mb-5">
+            <span className="section-badge">Our Programs</span>
+            <h2 className="section-title mt-2">
+              Popular <span>Courses</span>
+            </h2>
+            <p className="section-subtitle">
+              Industry-aligned programs crafted to get you hired faster.
+            </p>
+          </ScrollReveal>
+          <div className="row g-4">
+            {courses.map((course, i) => (
+              <ScrollReveal
+                key={course.id}
+                className="col-md-6 col-lg-4"
+                delay={i * 80}
+              >
+                <CourseCard course={course} noCol />
+              </ScrollReveal>
             ))}
-
           </div>
-
         </div>
-
       </section>
 
-      <section className="py-5 bg-white">
+      {/* MAP */}
+      <section
+        className="py-section"
+        style={{
+          background: "var(--bg-secondary)",
+          borderTop: "1px solid var(--section-border)",
+        }}
+      >
         <div className="container">
-          <div className="text-center mb-4">
-            <h2 className="fw-bold">Visit Our Training Center</h2>
-            <p className="text-muted mb-0">
+          <ScrollReveal className="text-center mb-5">
+            <span className="section-badge">Find Us</span>
+            <h2 className="section-title mt-2">
+              Visit Our <span>Training Center</span>
+            </h2>
+            <p className="section-subtitle">
               3rd Floor, Opposite LIC Office, Bypass Road, Sangareddy, Telangana
             </p>
-          </div>
-          <div className="map-wrapper modern-map-card">
-            <iframe
-              title="Adi Guru Location"
-              src="https://www.google.com/maps?q=Opposite+LIC+Office,+Bypass+Road,+Sangareddy,+Telangana&output=embed"
-              width="100%"
-              height="380"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+          </ScrollReveal>
+          <ScrollReveal>
+            <div className="modern-map-card">
+              <iframe
+                title="Adi Guru Location"
+                src="https://www.google.com/maps?q=Opposite+LIC+Office,+Bypass+Road,+Sangareddy,+Telangana&output=embed"
+                width="100%"
+                height="400"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </>
