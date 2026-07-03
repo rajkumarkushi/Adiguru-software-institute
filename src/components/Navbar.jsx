@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa";
 import { useTheme } from "../context/ThemeContext";
-import logo from "../assets/logo.jpeg";
+import logo from "../assets/logo.png";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,16 +22,16 @@ function Navbar() {
           </div>
         </Link>
 
-        {/* RIGHT: toggle + hamburger on mobile */}
+        {/* RIGHT: theme toggle + hamburger */}
         <div className="d-flex align-items-center gap-2 ms-auto">
 
-          {/* THEME TOGGLE */}
+          {/* GOLD THEME TOGGLE */}
           <button
             className="theme-toggle-btn"
             id="theme-toggle-btn"
-            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             onClick={toggleTheme}
-            title={theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+            title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           >
             {theme === 'dark' ? <FaSun /> : <FaMoon />}
           </button>
@@ -44,14 +44,13 @@ function Navbar() {
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen(prev => !prev)}
           >
-            {menuOpen ? "✕" : "☰"}
+            {menuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
 
-        {/* MENU */}
+        {/* NAV LINKS */}
         <div className={`navbar-menu ${menuOpen ? "is-open" : ""}`}>
           <ul className="navbar-nav align-items-center flex-row flex-wrap justify-content-end">
-
             <li className="nav-item">
               <Link className="nav-link nav-custom-link" to="/" onClick={closeMenu}>Home</Link>
             </li>
@@ -74,7 +73,6 @@ function Navbar() {
                 </button>
               </Link>
             </li>
-
           </ul>
         </div>
 

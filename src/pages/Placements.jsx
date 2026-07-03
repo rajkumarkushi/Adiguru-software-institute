@@ -1,14 +1,22 @@
+import {
+  FaFileAlt,
+  FaMicrophone,
+  FaBriefcase,
+  FaBookOpen,
+  FaChartBar,
+  FaHandshake,
+} from "react-icons/fa";
 import ScrollReveal from "../components/ScrollReveal";
 import CountUp from "../components/CountUp";
 import { useNavigate } from "react-router-dom";
 
 const placementSupport = [
-  { icon: "📄", text: "Resume Building and ATS Optimization" },
-  { icon: "🎙️", text: "Mock Technical and HR Interviews" },
-  { icon: "💼", text: "LinkedIn Profile and Personal Branding" },
-  { icon: "📚", text: "Real-Time Interview Question Banks" },
-  { icon: "📊", text: "Weekly Hiring Readiness Assessments" },
-  { icon: "🤝", text: "Referral Support with Partner Companies" },
+  { icon: <FaFileAlt />,    text: "Resume Building and ATS Optimization" },
+  { icon: <FaMicrophone />, text: "Mock Technical and HR Interviews" },
+  { icon: <FaBriefcase />,  text: "LinkedIn Profile and Personal Branding" },
+  { icon: <FaBookOpen />,   text: "Real-Time Interview Question Banks" },
+  { icon: <FaChartBar />,   text: "Weekly Hiring Readiness Assessments" },
+  { icon: <FaHandshake />,  text: "Referral Support with Partner Companies" },
 ];
 
 const stats = [
@@ -62,7 +70,7 @@ function Placements() {
             {placementSupport.map((item, i) => (
               <ScrollReveal className="col-md-6" key={item.text} delay={i * 80}>
                 <div className="placement-item">
-                  <span>{item.icon}</span>
+                  <span className="placement-item-icon">{item.icon}</span>
                   <p>{item.text}</p>
                 </div>
               </ScrollReveal>

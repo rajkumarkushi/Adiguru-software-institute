@@ -4,10 +4,11 @@ import { useEffect, useRef, useState } from 'react';
  * Animated number counter that starts when element scrolls into view.
  * Accepts targets like "5000+", "95%", "Weekly", "25+"
  */
-function CountUp({ target, duration = 2000 }) {
+function CountUp({ target, suffix: suffixProp, duration = 2000 }) {
   const match = String(target).match(/^([\d.]+)(\D*)$/);
   const num = match ? parseFloat(match[1]) : null;
-  const suffix = match ? match[2] : '';
+  // explicit suffix prop takes priority over parsed suffix from target string
+  const suffix = suffixProp !== undefined ? suffixProp : (match ? match[2] : '');
 
   const [count, setCount] = useState(num !== null ? 0 : null);
   const ref = useRef(null);

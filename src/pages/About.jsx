@@ -3,9 +3,9 @@ import CountUp from "../components/CountUp";
 
 const stats = [
   { stat: "5000", suffix: "+", label: "Students Trained" },
-  { stat: "25",   suffix: "+", label: "Expert Mentors"   },
-  { stat: "100",  suffix: "+", label: "Hiring Partners"  },
-  { stat: "95",   suffix: "%", label: "Placement Rate"   },
+  { stat: "25", suffix: "+", label: "Expert Mentors" },
+  { stat: "100", suffix: "+", label: "Hiring Partners" },
+  { stat: "95", suffix: "%", label: "Placement Rate" },
 ];
 
 function About() {
@@ -19,7 +19,7 @@ function About() {
             <span className="page-badge">About Adi Guru</span>
             <h1>Building Careers Through Quality IT Training</h1>
             <p className="page-hero-description mx-auto">
-              Adi Guru Software Training Institute is committed to helping students, freshers,
+              Agi Guru Learning and Skill Development Institute is committed to helping students, freshers,
               and professionals gain practical technology skills for long-term career growth.
             </p>
           </div>

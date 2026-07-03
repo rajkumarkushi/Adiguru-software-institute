@@ -1,18 +1,25 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import {
+  FaStar,
+  FaUserGraduate,
+  FaLaptopCode,
+  FaRocket,
+  FaCertificate,
+} from "react-icons/fa";
 import CountUp from "./CountUp";
 
 const WORDS = ["Job-Ready Skills", "Real Experience", "Career Success", "Industry Expertise"];
 
 const PARTICLES = [
-  { w: 8,  h: 8,  top: "15%", left: "8%",  delay: "0s",    dur: "7s"  },
-  { w: 5,  h: 5,  top: "65%", left: "4%",  delay: "1.2s",  dur: "9s"  },
-  { w: 10, h: 10, top: "78%", left: "14%", delay: "2.5s",  dur: "6s"  },
-  { w: 6,  h: 6,  top: "28%", right: "7%", delay: "0.8s",  dur: "8.5s"},
-  { w: 9,  h: 9,  top: "70%", right: "10%",delay: "1.8s",  dur: "7.5s"},
-  { w: 4,  h: 4,  top: "45%", right: "22%",delay: "3s",    dur: "10s" },
-  { w: 7,  h: 7,  top: "20%", left: "48%", delay: "0.5s",  dur: "8s"  },
-  { w: 5,  h: 5,  top: "85%", right: "35%",delay: "2s",    dur: "6.5s"},
+  { w: 8, h: 8, top: "15%", left: "8%", delay: "0s", dur: "7s" },
+  { w: 5, h: 5, top: "65%", left: "4%", delay: "1.2s", dur: "9s" },
+  { w: 10, h: 10, top: "78%", left: "14%", delay: "2.5s", dur: "6s" },
+  { w: 6, h: 6, top: "28%", right: "7%", delay: "0.8s", dur: "8.5s" },
+  { w: 9, h: 9, top: "70%", right: "10%", delay: "1.8s", dur: "7.5s" },
+  { w: 4, h: 4, top: "45%", right: "22%", delay: "3s", dur: "10s" },
+  { w: 7, h: 7, top: "20%", left: "48%", delay: "0.5s", dur: "8s" },
+  { w: 5, h: 5, top: "85%", right: "35%", delay: "2s", dur: "6.5s" },
 ];
 
 function Hero() {
@@ -79,7 +86,8 @@ function Hero() {
           <div className="col-lg-6">
 
             <div className="hero-badge">
-              ⭐ <span>#1 IT Training Institute in Sangareddy</span>
+              <FaStar style={{ color: "#FFD700" }} />
+              <span>#1 IT Training Institute in Sangareddy</span>
             </div>
 
             <h1 className="hero-heading">
@@ -91,7 +99,7 @@ function Hero() {
             </h1>
 
             <p className="hero-description">
-              Adi Guru Software Training Institute equips students and
+              Agi Guru Learning and Skill Development Institute equips students and
               professionals with in-demand technologies through hands-on
               projects, expert mentorship, and dedicated placement support.
             </p>
@@ -114,10 +122,10 @@ function Hero() {
             </div>
 
             <div className="hero-highlights">
-              <span>🎓 Industry Experts</span>
-              <span>💻 Project-Based</span>
-              <span>🚀 Placement Support</span>
-              <span>📜 Certification</span>
+              <span><FaUserGraduate style={{ marginRight: 6 }} />Industry Experts</span>
+              <span><FaLaptopCode style={{ marginRight: 6 }} />Project-Based</span>
+              <span><FaRocket style={{ marginRight: 6 }} />Placement Support</span>
+              <span><FaCertificate style={{ marginRight: 6 }} />Certification</span>
             </div>
 
             <div className="hero-stats">
