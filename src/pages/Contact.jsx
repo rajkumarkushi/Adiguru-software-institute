@@ -225,7 +225,7 @@ function Contact() {
                 </div>
                 <div className="d-flex align-items-center gap-3 mb-4">
                   <span style={{ color: "var(--gold-mid)", fontSize: "16px" }}><FaEnvelope /></span>
-                  <p style={{ color: "var(--text-primary)" }}>info@adiguru.in</p>
+                  <p style={{ color: "var(--text-primary)" }}>adiguru08@gmail.com</p>
                 </div>
 
                 <div className="d-flex gap-3 mb-4">
@@ -233,7 +233,7 @@ function Contact() {
                      className="contact-social-link" id="contact-whatsapp-link">
                     <FaWhatsapp /> WhatsApp
                   </a>
-                  <a href="https://instagram.com" target="_blank" rel="noreferrer"
+                  <a href="https://instagram.com/adiguru_08" target="_blank" rel="noreferrer"
                      className="contact-social-link" id="contact-instagram-link">
                     <FaInstagram /> Instagram
                   </a>
