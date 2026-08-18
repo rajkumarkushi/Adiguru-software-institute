@@ -98,7 +98,7 @@ export default async function handler(req, res) {
 
               <!-- FOOTER -->
               <div style="padding:20px 36px;background:#f9f3e0;border-top:1px solid rgba(184,134,11,0.15);text-align:center;">
-                <p style="margin:0;font-size:12px;color:#7A5800;">Agi Guru Learning and Skill Development Institute — Sangareddy, Telangana</p>
+                <p style="margin:0;font-size:12px;color:#7A5800;">Adi Guru Learning and Skill Development Institute — Sangareddy, Telangana</p>
               </div>
             </div>
           </body>

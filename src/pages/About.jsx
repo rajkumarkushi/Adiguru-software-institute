@@ -19,7 +19,7 @@ function About() {
             <span className="page-badge">About Adi Guru</span>
             <h1>Building Careers Through Quality IT Training</h1>
             <p className="page-hero-description mx-auto">
-              Agi Guru Learning and Skill Development Institute is committed to helping students, freshers,
+              Adi Guru Learning and Skill Development Institute is committed to helping students, freshers,
               and professionals gain practical technology skills for long-term career growth.
             </p>
           </div>

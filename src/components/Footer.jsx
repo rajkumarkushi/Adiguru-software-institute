@@ -8,7 +8,7 @@ function Footer() {
 
           {/* BRAND */}
           <div className="col-md-5">
-            <div className="footer-brand-title">Agi Guru Learning and Skill Development Institute</div>
+            <div className="footer-brand-title">Adi Guru Learning and Skill Development Institute</div>
             <p className="footer-text mb-3">
               Professional IT training for students and professionals with
               hands-on projects, expert mentors, and dedicated placement support.
@@ -58,7 +58,7 @@ function Footer() {
         <hr className="footer-divider my-4" />
 
         <p className="footer-bottom-text text-center mb-0">
-          © 2026 Agi Guru Learning and Skill Development Institute. All Rights Reserved. &nbsp;·&nbsp; Sangareddy, Telangana
+          © 2026 Adi Guru Learning and Skill Development Institute. All Rights Reserved. &nbsp;·&nbsp; Sangareddy, Telangana
         </p>
       </div>
     </footer>

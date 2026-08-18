@@ -99,7 +99,7 @@ function Hero() {
             </h1>
 
             <p className="hero-description">
-              Agi Guru Learning and Skill Development Institute equips students and
+              Adi Guru Learning and Skill Development Institute equips students and
               professionals with in-demand technologies through hands-on
               projects, expert mentorship, and dedicated placement support.
             </p>
